@@ -1,13 +1,12 @@
-// app/events/[id]/page.jsx
+import { notFound } from 'next/navigation';
 import { events } from '@/data/events';
-import EventDetails from '@/components/EventDetails'; // On va créer ce composant
-import { events } from '@/data/events'; // On va créer ce fichier
+import EventDetails from '@/components/EventDetails';
 
 export default function EventDetailsPage({ params }) {
-    const event = events.find((e) => e.id === parseInt(params.id));
+    const event = events.find((e) => e.id.toString() === params.id);
 
     if (!event) {
-        return <div>Événement non trouvé</div>;
+        notFound();
     }
 
     return (
@@ -16,3 +15,4 @@ export default function EventDetailsPage({ params }) {
         </main>
     );
 }
+

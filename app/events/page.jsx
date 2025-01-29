@@ -1,7 +1,7 @@
 // app/events/page.jsx
-import { events } from '@/data/events';
+
 import EventCard from '@/components/EventCard'; // On va créer ce composant
-import { events } from '@/data/events'; // On va créer ce fichier
+import { events } from '@/app/data/events'; // Correct path
 
 export default function EventsPage() {
     return (
@@ -17,3 +17,4 @@ export default function EventsPage() {
         </main>
     );
 }
+

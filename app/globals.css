@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-primary {
+  color: #1E40AF; /* Tailwind blue-800 */
+}
+
+.text-textSecondary {
+  color: #64748B; /* Tailwind gray-500 */
+}
+
+
 :root {
   --hue-color: 165;
   --first-color: hsl(var(--hue-color), 60%, 33%);

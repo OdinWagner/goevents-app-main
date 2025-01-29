@@ -1,3 +1,5 @@
+import Link from 'next/link'; // ✅ Import Link from Next.js
+
 export default function Home() {
   return (
     <div className="h-screen flex items-center justify-center text-white relative">
@@ -19,9 +21,13 @@ export default function Home() {
         <p className="text-lg md:text-xl mb-8 animate-float-delay">
           Découvrez les meilleurs événements près de chez vous.
         </p>
-        <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg animate-bounce">
-          Voir les événements
-        </button>
+
+        {/* ✅ Wrap the button in a Link */}
+        <Link href="/events">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg animate-bounce">
+            Voir les événements
+          </button>
+        </Link>
       </div>
     </div>
   );
